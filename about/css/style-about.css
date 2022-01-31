@@ -1,0 +1,186 @@
+/* CSS document */
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    background-color: #000;
+}
+
+.scrollfader {
+    background-image: url("../img/components/scrollfader.png");
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 68px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.loader {
+    border-top-color: #1c3334;
+}
+
+.loader:before {
+    border-top-color: #2f4454;
+}
+
+.loader:after {
+    border-top-color: #da7b93;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background: #333;
+}
+
+
+/* About me */
+
+.story-text {
+    flex: 4;
+    order: 1;
+}
+
+.story-margin {
+    flex: 1;
+    order: 2;
+}
+
+.story-images {
+    flex: 5;
+    order: 3;
+}
+
+.story-images img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Visuals */
+
+.scr-visual {
+    height: 37vh;
+    min-height: 360px;
+    max-height: 500px;
+    width: 100%;
+    background-image: url("../img/components/visual-scr.svg");
+    background-position: center;
+    background-repeat: repeat-x;
+    margin-top: 300px;
+    margin-bottom: 300px;
+}
+
+.neverstoplearning-visual img {
+    width: 100%;
+    height: auto;
+    margin-top: 300px;
+    margin-bottom: 200px;
+}
+
+
+/* Timeline */
+
+.timeline-visual img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+
+/* Toolset */
+
+.toolset-container {
+    margin-bottom: 300px;
+}
+
+.toolset {
+    width: 100%;
+    height: auto;
+}
+
+.toolset-image {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.toolset-image a img {
+    width: 30%;
+    height: auto;
+}
+
+.toolset-xd,
+.toolset-photoshop,
+.toolset-code,
+.toolset-sketch,
+.toolset-figma,
+.toolset-things {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+}
+
+
+/* Parkeergarage foto */
+
+.foto-park {
+    background-image: url("../img/foto-parking.jpg");
+}
+
+
+/* Hamburger */
+
+#navbutton-container {
+    display: flex;
+    position: fixed;
+    right: 0;
+    height: 150px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.navbutton-circle {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border: solid 1px #fff;
+    border-radius: 100%;
+    opacity: .2;
+}
+
+.navbutton-hamburger-icon {
+    width: 70px;
+    height: auto;
+    margin-top: 4px;
+    padding: 25px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+}
+
+.navbutton-hamburger-icon:visited {
+    opacity: 1;
+}
+
+.navbutton-hamburger-icon:hover,
+.navbutton-hamburger-icon:focus,
+.navbutton-hamburger-icon:active {
+    opacity: .4;
+}
