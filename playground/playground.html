@@ -219,12 +219,13 @@
             token: "6469d803ad85fc4886ea5b4044eb1c245c9031e63c77fc06f6992632a16683a6",
             page: 1,
             per_page: 999
-        }, function(shots) {
+        }, 
+            function(shots) {
             document.querySelector(".dribbble-shots-list").innerHTML = shots.reduce(function(html, shot) {
-                return html + '<li><a href="' + shot.html_url + '" target="_blank"><img src="' + shot.images.normal + '"></a></li>';
+            return html + '<li><a href="' + shot.html_url + '" target="_blank"><img src="' + shot.images.normal + '"></a></li>';
             }, "");
         });
-    </script>
+    
 </body>
 
 </html>
