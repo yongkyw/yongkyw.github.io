@@ -136,8 +136,13 @@
 
     <!-- Dribbble API -->
     <div data-aos="fade-up" class="playground-grid-container">
+        <ul id="dribbbleShots"></ul>
+    </div>
+        
+        <!--     <div data-aos="fade-up" class="playground-grid-container">
         <ul class="dribbble-shots-list"></ul>
     </div>
+        -->
 
     <!-- Photography -->
     <div class="hero">
@@ -207,6 +212,30 @@
         }
     });
 </script>    
+        <script>
+        // Set the Access Token
+        var accessToken = "6469d803ad85fc4886ea5b4044eb1c245c9031e63c77fc06f6992632a16683a6"
+
+// Call Dribble v2 API
+        $.ajax({
+        url: 'https://api.dribbble.com/v2/user/shots?access_token='+accessToken,
+        dataType: 'json',
+        type: 'GET',
+        success: function(data) {  
+                if (data.length > 0) { 
+                        $.each(data.reverse(), function(i, val) {                
+                        $('#dribbbleShots').prepend(
+            '<li class="shot" target="_blank" href="'+ val.html_url +'" title="' + val.title + '"><div class="title">' + val.title + '</div><img src="'+ val.images.hidpi +'"/></li>'
+            )
+        })
+      }
+      else {
+        $('#dribbbleShots').append('<p>Sorry, No shots yet</p>');
+      }
+    }
+}); 
+        </script>
+        <!--
          <script type="text/javascript" src="/js/jribbble.min.js"></script>
             <script type="text/javascript">
         // Dribbble API
@@ -219,7 +248,7 @@
                 return html + '<li><a href="' + shot.html_url + '" target="_blank"><img src="' + shot.images.normal + '"></a></li>';
             }, "");
         });
-    </script> 
+    </script> -->
 </body>
 
 </html>
